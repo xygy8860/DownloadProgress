@@ -47,6 +47,7 @@ Step 2. Add the dependency
 --
 Activity或者Fragment等Java文件中，findviewById找到控件后，mProgressBar.start即可开始动画下载。
 
+>
 ````
     final DownloadView mProgressBar = (DownloadView) findViewById(R.id.progressbar);
     mProgressBar.start(new DownloadView.OnCompleteListener() {
@@ -56,11 +57,14 @@ Activity或者Fragment等Java文件中，findviewById找到控件后，mProgress
         }
     });
 ````
+>
 
 根据下载进度，显示百分比数据：
 
+>
 ````
     mProgressBar.setProgress(progress);
 ````
+>
 
 至此，已经完成集成了。
