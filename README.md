@@ -11,6 +11,7 @@
 ----
 
 Step 1. Add the JitPack repository to your build file 
+<code>
 
 	allprojects {
 		repositories {
@@ -19,8 +20,16 @@ Step 1. Add the JitPack repository to your build file
 		}
 	}
 
+</code>
+
 Step 2. Add the dependency
+
+<code>
 
 	dependencies {
 	        compile 'com.github.xygy8860:DownloadProgress:1.0'
 	}
+	
+</code>
+
+
