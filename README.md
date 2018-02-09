@@ -5,3 +5,22 @@
 现在独立成库，开源给喜欢的小伙伴们。废话不说，请看图：
 
 ![](https://raw.githubusercontent.com/xygy8860/DownloadProgress/master/_360.gif)
+
+
+使用
+----
+
+Step 1. Add the JitPack repository to your build file 
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+Step 2. Add the dependency
+
+	dependencies {
+	        compile 'com.github.xygy8860:DownloadProgress:1.0'
+	}
