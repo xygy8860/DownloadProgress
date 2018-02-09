@@ -33,8 +33,10 @@ Step 2. Add the dependency
 2.布局
 --
 
+和系统控件一样的使用方法，直接在布局文件中使用即可
+
 ```
-<com.chenghui.downloadprogress.widget.DownloadView
+    <com.chenghui.downloadprogress.widget.DownloadView
         android:id="@+id/progressbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -43,13 +45,22 @@ Step 2. Add the dependency
 
 3.Java文件
 --
+Activity或者Fragment等Java文件中，findviewById找到控件后，mProgressBar.start即可开始动画下载。
 
 ````
-final DownloadView mProgressBar = (DownloadView) findViewById(R.id.progressbar);
-        mProgressBar.start(new DownloadView.OnCompleteListener() {
-            @Override
-            public void startComplete() {
-                mProgressBar.postDelayed(mRunnble, 100);
-            }
-        });
+    final DownloadView mProgressBar = (DownloadView) findViewById(R.id.progressbar);
+    mProgressBar.start(new DownloadView.OnCompleteListener() {
+        @Override
+        public void startComplete() {
+            mProgressBar.postDelayed(mRunnble, 100);
+        }
+    });
 ````
+
+根据下载进度，显示百分比数据：
+
+````
+    mProgressBar.setProgress(progress);
+````
+
+至此，已经完成集成了。
