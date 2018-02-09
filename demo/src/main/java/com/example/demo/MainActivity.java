@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.chenghui.customview.utils.PxUtils;
-import com.chenghui.customview.widget.CircleProgressBar;
-import com.chenghui.customview.widget.DownloadView;
+import com.chenghui.downloadprogress.utils.PxUtils;
+import com.chenghui.downloadprogress.widget.CircleProgressBar;
+import com.chenghui.downloadprogress.widget.DownloadView;
 
 public class MainActivity extends AppCompatActivity {
 

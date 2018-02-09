@@ -1,4 +1,4 @@
-package com.chenghui.customview.widget;
+package com.chenghui.downloadprogress.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,7 +8,7 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.chenghui.customview.utils.PxUtils;
+import com.chenghui.downloadprogress.utils.PxUtils;
 
 /**
  * Created by sunqinwei on 2017/2/10.

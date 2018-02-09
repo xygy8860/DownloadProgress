@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.chenghui.customview.widget.DownloadStartLayout
+    <com.chenghui.downloadprogress.widget.DownloadStartLayout
         android:id="@+id/download_progress_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

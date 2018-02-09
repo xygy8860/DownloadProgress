@@ -1,4 +1,4 @@
-package com.chenghui.customview.widget;
+package com.chenghui.downloadprogress.widget;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -17,8 +17,8 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.chenghui.customview.R;
-import com.chenghui.customview.utils.BallEvalutor;
+import com.chenghui.downloadprogress.R;
+import com.chenghui.downloadprogress.utils.BallEvalutor;
 
 /**
  * 下载动画

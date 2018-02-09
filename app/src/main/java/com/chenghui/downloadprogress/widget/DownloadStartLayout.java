@@ -1,4 +1,4 @@
-package com.chenghui.customview.widget;
+package com.chenghui.downloadprogress.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.chenghui.customview.R;
+import com.chenghui.downloadprogress.R;
 
 /**
  * 下载开始前动画

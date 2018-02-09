@@ -5,13 +5,13 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.chenghui.customview.widget.DownloadView
+    <com.chenghui.downloadprogress.widget.DownloadView
         android:id="@+id/progressbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp" />
 
-    <com.chenghui.customview.widget.CircleProgressBar
+    <com.chenghui.downloadprogress.widget.CircleProgressBar
         android:id="@+id/circleView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
