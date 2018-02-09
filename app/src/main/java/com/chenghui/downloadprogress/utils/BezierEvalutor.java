@@ -7,10 +7,10 @@ import android.graphics.PointF;
  * @author mikyou
  *         自定义估值器
  */
-public class BallEvalutor implements TypeEvaluator<PointF> {
+public class BezierEvalutor implements TypeEvaluator<PointF> {
     private int mA; // 正弦波A
 
-    public BallEvalutor(int mHeight, int parentHeight) {
+    public BezierEvalutor(int mHeight, int parentHeight) {
         mA = (parentHeight - mHeight) / 2;
     }
 

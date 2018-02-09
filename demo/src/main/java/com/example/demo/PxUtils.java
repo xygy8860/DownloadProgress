@@ -1,4 +1,4 @@
-package com.chenghui.downloadprogress.utils;
+package com.example.demo;
 
 import android.content.Context;
 import android.util.TypedValue;

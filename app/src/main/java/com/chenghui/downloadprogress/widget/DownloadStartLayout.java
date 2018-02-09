@@ -16,7 +16,7 @@ import com.chenghui.downloadprogress.R;
 
 /**
  * 下载开始前动画
- *
+ * <p>
  * Created by sunqinwei on 2017/2/17.
  */
 public class DownloadStartLayout extends RelativeLayout {
@@ -52,16 +52,17 @@ public class DownloadStartLayout extends RelativeLayout {
         mDownloadImg = (ImageView) v.findViewById(R.id.download_start_img);
     }
 
-    public void startZoomInAntimation(OnCompleteListener listener){
+    public void startZoomInAntimation(OnCompleteListener listener) {
         isZoomOut = false;
         startAnimation(listener);
     }
 
     /**
      * 下载完成
+     *
      * @param str
      */
-    public void setText(String str){
+    public void setText(String str) {
         mDownloadTxt.setText(str);
         mDownloadTxt.setVisibility(VISIBLE);
         mDownloadImg.clearAnimation();
@@ -98,7 +99,7 @@ public class DownloadStartLayout extends RelativeLayout {
             if (isZoomIn) { // 缩小动画
                 if (mDurationWidth > mHeight) {
                     // 持续缩小动画，通过持续缩小 width 实现
-                    mDurationWidth = mDurationWidth - mSpace;
+                    mDurationWidth = Math.max(mDurationWidth - mSpace, mHeight);
                     mParms.width = (int) mDurationWidth;
                     mDownloadLayout.setLayoutParams(mParms);
                     mDownloadLayout.postDelayed(mRunnable, mSpaceTime);
@@ -115,24 +116,24 @@ public class DownloadStartLayout extends RelativeLayout {
                     mDownloadLayout.postDelayed(mRunnable, 500);
                 } else {
                     //完成动画回调
-                    if(isZoomOut){
+                    if (isZoomOut) {
                         isZoomIn = false;
                         mDownloadLayout.postDelayed(mRunnable, 10);
-                    }else{
-                        if(mOnCompleteListener != null){
+                    } else {
+                        if (mOnCompleteListener != null) {
                             mOnCompleteListener.complete(mDownloadLayout);
                         }
                     }
                 }
             } else { // 放大动画
                 if (mWidth > mDurationWidth) {
-                    // 持续缩小动画，通过持续缩小 width 实现
+                    // 持续放大动画，通过持续增加 width 实现
                     mDurationWidth = mDurationWidth + mSpace;
                     mParms.width = (int) mDurationWidth;
                     mDownloadLayout.setLayoutParams(mParms);
                     mDownloadLayout.postDelayed(mRunnable, mSpaceTime);
-                }else{
-                    if(mOnCompleteListener != null){
+                } else {
+                    if (mOnCompleteListener != null) {
                         mDownloadImg.clearAnimation();
                         mOnCompleteListener.complete(mDownloadLayout);
                     }
