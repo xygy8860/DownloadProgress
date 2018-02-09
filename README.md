@@ -6,8 +6,10 @@
 
 ![](https://raw.githubusercontent.com/xygy8860/DownloadProgress/master/_360.gif)
 
+使用步骤
+====
 
-使用
+1.gradle
 ----
 
 Step 1. Add the JitPack repository to your build file 
@@ -28,4 +30,26 @@ Step 2. Add the dependency
 	}
 ````
 
+2.布局
+--
 
+```
+<com.chenghui.downloadprogress.widget.DownloadView
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+```
+
+
+3.Java文件
+--
+
+````
+final DownloadView mProgressBar = (DownloadView) findViewById(R.id.progressbar);
+        mProgressBar.start(new DownloadView.OnCompleteListener() {
+            @Override
+            public void startComplete() {
+                mProgressBar.postDelayed(mRunnble, 100);
+            }
+        });
+````
